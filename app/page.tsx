@@ -1,4 +1,5 @@
 import ContactForm from "@/components/ContactForm";
+import MobileMenu from "@/components/MobileMenu";
 import {
   SteeringWheel, Check, ArrowRight, Phone, WhatsApp, Pin, Clock, Plus,
 } from "@/components/Icons";
@@ -44,9 +45,10 @@ export default function Home() {
               <a key={href} href={href} style={{ textDecoration: "none", fontWeight: 700, fontSize: 14.5, color: "var(--petrol)" }}>{label}</a>
             ))}
           </nav>
-          <a href="#contact" className="k-pill" style={{ display: "flex", alignItems: "center", gap: 9, background: "var(--teal)", color: "#062024", textDecoration: "none", fontWeight: 800, fontSize: 14.5, padding: "11px 20px", whiteSpace: "nowrap" }}>
+          <a href="#contact" className="k-pill k-header-cta" style={{ display: "flex", alignItems: "center", gap: 9, background: "var(--teal)", color: "#062024", textDecoration: "none", fontWeight: 800, fontSize: 14.5, padding: "11px 20px", whiteSpace: "nowrap" }}>
             Proefles aanvragen <ArrowRight size={15} />
           </a>
+          <MobileMenu />
         </div>
       </header>
 

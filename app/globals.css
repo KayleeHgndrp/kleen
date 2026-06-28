@@ -49,12 +49,17 @@ summary .pm { transition: transform .2s; }
    sticky mobile CTA bar shown. Swapped at the >=880px breakpoint. */
 .k-desk-nav, .k-topbar-wrap { display: none; }
 .k-hero-note { display: none; }
+/* Header CTA pill is desktop-only; on mobile it overflowed the viewport.
+   The hamburger menu takes its place below the breakpoint. */
+.k-header-cta { display: none !important; }
 
 @media (min-width: 880px) {
   .k-desk-nav { display: flex !important; }
   .k-topbar-wrap { display: flex !important; }
   .k-mobile-bar { display: none !important; }
   .k-hero-note { display: flex !important; }
+  .k-header-cta { display: flex !important; }
+  .k-mobile-menu { display: none !important; }
 }
 
 /* Interactive states that the prototype expressed via style-hover / style-focus. */
