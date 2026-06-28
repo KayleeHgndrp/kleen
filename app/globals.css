@@ -60,6 +60,10 @@ summary .pm { transition: transform .2s; }
   .k-hero-note { display: flex !important; }
   .k-header-cta { display: flex !important; }
   .k-mobile-menu { display: none !important; }
+  /* "Wat zoek je?" tiles: a centered wrapping row on desktop,
+     a clean full-width stack on mobile (mobile-first inline styles). */
+  .k-tilewrap { flex-direction: row !important; flex-wrap: wrap !important; align-items: center !important; justify-content: center !important; gap: 14px 18px !important; }
+  .k-tilewrap > .k-tile { flex: 0 0 auto; }
 }
 
 /* Interactive states that the prototype expressed via style-hover / style-focus. */
