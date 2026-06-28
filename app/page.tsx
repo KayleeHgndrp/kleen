@@ -88,10 +88,10 @@ export default function Home() {
 
         {/* WAT ZOEK JE */}
         <section style={{ maxWidth: 1180, margin: "0 auto", padding: "26px 22px 0" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "14px 18px", flexWrap: "wrap", justifyContent: "center" }}>
-            <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: 20, letterSpacing: ".5px", textTransform: "uppercase", color: "var(--petrol)" }}>Wat zoek je?</span>
+          <div className="k-tilewrap" style={{ display: "flex", flexDirection: "column", alignItems: "stretch", gap: 12 }}>
+            <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: 20, letterSpacing: ".5px", textTransform: "uppercase", color: "var(--petrol)", textAlign: "center" }}>Wat zoek je?</span>
             {tiles.map((t) => (
-              <a key={t.label} href="#aanbod" className="k-pill k-tile" style={{ display: "inline-flex", alignItems: "center", gap: 11, textDecoration: "none", background: "#fff", border: "1px solid #e3edee", padding: "8px 20px 8px 8px", boxShadow: "0 8px 20px -16px rgba(14,69,78,.5)" }}>
+              <a key={t.label} href="#aanbod" className="k-pill k-tile" style={{ display: "flex", alignItems: "center", gap: 11, textDecoration: "none", background: "#fff", border: "1px solid #e3edee", padding: "8px 20px 8px 8px", boxShadow: "0 8px 20px -16px rgba(14,69,78,.5)" }}>
                 <span style={{ display: "grid", placeItems: "center", width: 42, height: 42, borderRadius: "50%", background: "linear-gradient(160deg,#12525c,#0e454e)" }}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d={t.icon} /></svg>
                 </span>
@@ -153,8 +153,8 @@ export default function Home() {
                 </div>
               </div>
               <div style={{ position: "relative", background: "#fff", borderRadius: 20, padding: "30px 28px", boxShadow: "0 30px 60px -28px rgba(0,0,0,.4)" }}>
-                <SteeringWheel size={92} stroke="var(--teal)" width={3} style={{ position: "absolute", right: -14, top: -22 }} />
-                <h3 style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: 26, lineHeight: 1.05, letterSpacing: ".3px", color: "var(--petrol)", marginBottom: 20, maxWidth: 230 }}>
+                <SteeringWheel size={74} stroke="var(--teal)" width={3} style={{ position: "absolute", right: -10, top: -24, zIndex: 0 }} />
+                <h3 style={{ position: "relative", zIndex: 1, fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: 26, lineHeight: 1.05, letterSpacing: ".3px", color: "var(--petrol)", marginBottom: 20, maxWidth: 230, paddingRight: 30 }}>
                   Dit is waarom je rijles neemt bij KLEEN
                 </h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
