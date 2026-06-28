@@ -152,9 +152,9 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div style={{ position: "relative", background: "#fff", borderRadius: 20, padding: "30px 28px", boxShadow: "0 30px 60px -28px rgba(0,0,0,.4)" }}>
-                <SteeringWheel size={74} stroke="var(--teal)" width={3} style={{ position: "absolute", right: -10, top: -24, zIndex: 0 }} />
-                <h3 style={{ position: "relative", zIndex: 1, fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: 26, lineHeight: 1.05, letterSpacing: ".3px", color: "var(--petrol)", marginBottom: 20, maxWidth: 230, paddingRight: 30 }}>
+              <div className="k-why-card" style={{ position: "relative", background: "#fff", borderRadius: 20, boxShadow: "0 30px 60px -28px rgba(0,0,0,.4)" }}>
+                <SteeringWheel size={64} stroke="var(--teal)" width={3} style={{ position: "absolute", right: -8, top: -20, zIndex: 0 }} />
+                <h3 className="k-why-title" style={{ position: "relative", zIndex: 1, fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: 26, lineHeight: 1.05, letterSpacing: ".3px", color: "var(--petrol)", marginBottom: 20 }}>
                   Dit is waarom je rijles neemt bij KLEEN
                 </h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>

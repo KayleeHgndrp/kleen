@@ -66,6 +66,17 @@ summary .pm { transition: transform .2s; }
   .k-tilewrap > .k-tile { flex: 0 0 auto; }
 }
 
+/* "Waarom"-card: on mobile the corner wheel and the heading share the top of
+   a narrow card. Add top padding so the full-width heading starts below the
+   wheel instead of being squeezed into a narrow column beside it. On the wider
+   desktop card the heading sits next to the wheel (capped width). */
+.k-why-card { padding: 48px 28px 30px; }
+.k-why-title { padding-right: 0; }
+@media (min-width: 880px) {
+  .k-why-card { padding: 30px 28px; }
+  .k-why-title { max-width: 230px; }
+}
+
 /* Interactive states that the prototype expressed via style-hover / style-focus. */
 .k-tile {
   transition: border-color .2s, transform .2s;
