@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#072227}
+  ::selection{background:#52b8c6;color:#062024}
+</style>
+</helmet>
+<div style="min-height:100vh;width:100%;background:radial-gradient(120% 90% at 30% 12%,#16565f 0%,#0d3f47 45%,#082a31 100%);font-family:'Mulish',system-ui,sans-serif;display:flex;flex-direction:column;align-items:center;padding:34px 18px 48px">
+
+  <!-- LOGO LOCKUP -->
+  <div style="display:flex;align-items:center;gap:16px;margin-bottom:34px;width:100%;max-width:430px;justify-content:center">
+    <svg width="52" height="52" viewBox="0 0 64 64" fill="none" stroke="#ffffff" stroke-width="3.4" style="flex:none">
+      <circle cx="32" cy="32" r="27"/>
+      <circle cx="32" cy="32" r="7"/>
+      <line x1="32" y1="9" x2="32" y2="25"/>
+      <line x1="12.6" y1="43" x2="26" y2="35.5"/>
+      <line x1="51.4" y1="43" x2="38" y2="35.5"/>
+    </svg>
+    <div style="width:2px;height:54px;background:rgba(255,255,255,.32)"></div>
+    <div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:30px;letter-spacing:.5px;line-height:1;color:#eef6f7"><span style="font-weight:700">KLEEN</span> <span style="font-weight:500;color:#cfe1e4">INSTRUCTIONS</span></div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:2.4px;color:#4ea7b4;margin-top:5px">TRAINING &amp; COACHING IN RIJVAARDIGHEID</div>
+    </div>
+  </div>
+
+  <!-- PROFIELKAART -->
+  <div style="width:100%;max-width:430px;background:linear-gradient(160deg,#12525c 0%,#0e454e 100%);border-radius:22px;overflow:hidden;position:relative;box-shadow:0 30px 60px -24px rgba(0,0,0,.55)">
+
+    <!-- stuur-watermerk -->
+    <svg width="300" height="300" viewBox="0 0 64 64" fill="none" stroke="#ffffff" stroke-width="2.2" style="position:absolute;left:-70px;top:70px;opacity:.06;pointer-events:none">
+      <circle cx="32" cy="32" r="27"/>
+      <circle cx="32" cy="32" r="7"/>
+      <line x1="32" y1="9" x2="32" y2="25"/>
+      <line x1="12.6" y1="43" x2="26" y2="35.5"/>
+      <line x1="51.4" y1="43" x2="38" y2="35.5"/>
+    </svg>
+
+    <!-- naam + subtitle -->
+    <div style="position:relative;z-index:2;padding:34px 28px 0">
+      <h1 style="font-weight:800;font-size:32px;letter-spacing:-.4px;color:#ffffff;line-height:1.05">Danny Kleen</h1>
+      <div style="font-weight:700;font-size:17px;color:#5cc0cd;margin-top:6px">Specialist in rijvaardigheid</div>
+    </div>
+
+    <!-- diagonale wit-vlak -->
+    <div style="position:relative;height:230px;margin-top:18px">
+      <div style="position:absolute;inset:0;background:#ffffff;clip-path:polygon(0% 46%,100% 14%,100% 100%,0% 100%)"></div>
+      <!-- cirkelfoto over de snede -->
+      <div style="position:absolute;right:26px;top:18px;width:178px;height:178px;border-radius:50%;overflow:hidden;box-shadow:0 14px 30px -10px rgba(0,0,0,.5)">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="kleen-instructeur" src="uploads/LesFoto1.jpg" shape="circle" placeholder="Sleep instructeurfoto" hint-size="178px,178px" style="width:178px;height:178px"></x-import>
+      </div>
+    </div>
+
+    <!-- bio -->
+    <div style="background:#ffffff;padding:6px 28px 34px;position:relative;z-index:2">
+      <p style="font-size:16px;line-height:1.62;color:#2b3338;font-weight:500">Als enthousiaste instructeur met uitgebreide expertise, richt ik mij voornamelijk op het geven van rijvaardigheidstrainingen voor categorie&euml;n <strong style="color:#0e454e">B/BE</strong>, <strong style="color:#0e454e">C/CE</strong>, <strong style="color:#0e454e">T</strong>, en <strong style="color:#0e454e">Code 95 nascholing</strong>. Daarnaast ben ik ervaren in het instrueren van groteren en help ik bestuurders met meer zelfvertrouwen en controle achter het stuur te komen.</p>
+
+      <!-- specialisaties -->
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:22px">
+        <sc-for list="{{ tags }}" as="t" hint-placeholder-count="5">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.5px;color:#0e454e;background:#e3f0f1;border:1px solid #c5dde0;padding:6px 13px;border-radius:8px">{{ t }}</span>
+        </sc-for>
+      </div>
+
+      <!-- CTA -->
+      <a href="{{ telHref }}" style="display:flex;align-items:center;justify-content:center;gap:10px;margin-top:26px;background:#0e454e;color:#ffffff;text-decoration:none;font-weight:800;font-size:16px;padding:16px;border-radius:13px">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#5cc0cd" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Plan een training met Danny
+      </a>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:466,&quot;height&quot;:760}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      telHref: "tel:+31612345678",
+      tags: ["B / BE rijvaardigheid", "C / CE", "T (trekker)", "Code 95 nascholing", "Coaching"],
+    };
+  }
+}
+</script>
+</body>
+</html>
