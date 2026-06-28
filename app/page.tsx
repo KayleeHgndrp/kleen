@@ -108,7 +108,7 @@ export default function Home() {
           <p style={{ color: "var(--ink-soft)", fontSize: 16, lineHeight: 1.6, maxWidth: 680, margin: "0 auto 36px" }}>
             Bij KLEEN Instructions in Bergen op Zoom bieden we een breed aanbod om bij jouw wensen te passen. Of je nu kiest voor schakel, automaat, een spoedcursus of faalangsttraining — je leert veilig en zelfverzekerd rijden.
           </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(230px,1fr))", gap: 16, textAlign: "left" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,230px),1fr))", gap: 16, textAlign: "left" }}>
             {aanbod.map((a) => (
               <div key={a.titel + a.tag} style={{ display: "flex", flexDirection: "column", background: "var(--tint)", borderRadius: 18, overflow: "hidden" }}>
                 <div style={{ padding: "24px 22px 18px", display: "flex", flexDirection: "column", flex: 1 }}>
@@ -132,7 +132,7 @@ export default function Home() {
         <section id="waarom" style={{ padding: "48px 22px" }}>
           <div style={{ maxWidth: 1180, margin: "0 auto", position: "relative", background: "var(--teal-2)", borderRadius: 26, overflow: "hidden", padding: "clamp(30px,5vw,56px)" }}>
             <SteeringWheel size={460} stroke="#fff" width={1.6} style={{ position: "absolute", left: -150, bottom: -150, opacity: .08, pointerEvents: "none" }} />
-            <div style={{ position: "relative", zIndex: 2, display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(290px,1fr))", gap: 30, alignItems: "center" }}>
+            <div style={{ position: "relative", zIndex: 2, display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,290px),1fr))", gap: 30, alignItems: "center" }}>
               <div style={{ color: "#fff" }}>
                 <h2 style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: "clamp(30px,6.5vw,48px)", lineHeight: 1.02, letterSpacing: ".5px", textTransform: "uppercase", marginBottom: 18 }}>
                   Waarom kiezen voor KLEEN Instructions?
