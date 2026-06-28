@@ -1,0 +1,70 @@
+/* Ported from the KLEEN Instructions design <style> block. */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: var(--ink);
+  font-family: "Mulish", system-ui, sans-serif;
+}
+
+:root {
+  --petrol: #0e454e;
+  --navy: #082a31;
+  --teal: #5cc0cd;
+  --teal-2: #2c8f9d;
+  --tint: #eaf5f6;
+  --ink: #22313a;
+  --ink-soft: #5d6f76;
+}
+
+::selection { background: var(--teal); color: #062024; }
+a { color: inherit; }
+
+summary::-webkit-details-marker { display: none; }
+details[open] summary .pm { transform: rotate(45deg); }
+summary .pm { transition: transform .2s; }
+
+.k-eyebrow {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--teal-2);
+}
+.k-h2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: clamp(30px, 7.5vw, 46px);
+  letter-spacing: .5px;
+  line-height: 1.02;
+  text-transform: uppercase;
+}
+.k-pill { border-radius: 999px; }
+
+/* Mobile-first visibility: desktop nav / topbar / hero extras hidden by default,
+   sticky mobile CTA bar shown. Swapped at the >=880px breakpoint. */
+.k-desk-nav, .k-topbar-wrap { display: none; }
+.k-hero-note { display: none; }
+
+@media (min-width: 880px) {
+  .k-desk-nav { display: flex !important; }
+  .k-topbar-wrap { display: flex !important; }
+  .k-mobile-bar { display: none !important; }
+  .k-hero-note { display: flex !important; }
+}
+
+/* Interactive states that the prototype expressed via style-hover / style-focus. */
+.k-tile {
+  transition: border-color .2s, transform .2s;
+}
+.k-tile:hover {
+  border-color: var(--teal);
+  transform: translateY(-2px);
+}
+.k-field:focus {
+  border-color: var(--teal);
+}
